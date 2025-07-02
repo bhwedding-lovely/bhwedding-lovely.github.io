@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo thiệp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Texturina:opsz,wght@12..72,100&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bellota+Text&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Texturina:opsz,wght@12..72,100&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playball&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@100&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./templates/template110/css/libs.css?v=20250312">
+    <link rel="stylesheet" href="./templates/template110/css/style.css?v=20250312">
+    <link rel="stylesheet" href="./templates/template110/css/style.css?v=20250312">
+</head>
+
+<body>
+    <div id="section-comment" class="pb-3">
+            <div class="col-auto mb-3">
+                <div class="textarea-emoji-picker position-relative">
+                    <div class="vitualTextarea form-control px-0">
+                        <input type="text" id="content" name="content" class="form-control border-0" rows="3" cols=""
+                            placeholder="Nhập tên người nhận thiệp*">
+                    </div>
+                    <div style="display: flex;justify-content: center;align-items: center;">
+                        <label>Nhà trai &nbsp;</label>
+                        <input type="checkbox" id="isMan">
+                    </div>
+                </div>
+                <div class="text-center" style="padding: 10px;">
+                    ❊ Trang này để tạo thiệp nên không gửi link trang này cho người khác nha vợ!
+                    <br>
+                    Gửi link sau khi nhấn nút tạo cho họ là được.
+                </div>
+                <div class="col-auto text-center" style="margin-top: 10px;">
+                    <button class="p-2 w-50 btn btn-success" onclick="create_invite()">
+                        Tạo thiệp
+                    </button>
+                </div>
+            </div>
+        <script>
+            function create_invite() {
+                var content = document.getElementById("content").value;
+                var url = "/?name=" + encodeURIComponent(content) + "&isMan=" + document.getElementById("isMan").checked;
+                window.location.href = url;
+            }
+        </script>
+</body>
+</html>
