@@ -149,6 +149,7 @@ $(document).ready(function () {
         $(".opening-flower").addClass("show");
         $(".opening-save").addClass("show");
         $(".opening-title").addClass("show");
+        window.scrollTo(0, 0);
     }, 1000);
     setTimeout(function () {
         $(".opening-section").addClass("hide");
